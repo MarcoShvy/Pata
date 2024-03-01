@@ -1,0 +1,40 @@
+<div class="rounded w-[80%] h-[80%] m-auto flex items-center justify-center bg-white my-12">
+    <div class="m-12">
+        <form class="flex items-center gap-5 flex-wrap">
+
+            <div class="flex flex-col">
+                <label for="species">Especies</label>
+                <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="species">
+                    <option selected>Especies</option>
+                    <option *ngFor="let specie of species">{{ specie }}</option>
+                    
+                </select>
+            </div>
+
+            <div class="flex flex-col">
+
+                <label for="race">Raça</label>
+                <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="race">
+                    <option selected >Raça</option>
+                    <option *ngFor="let race of races">{{ race }}</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col">
+
+                <label for="color">Cor</label>
+                <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="color">
+                    <option selected>Cor</option>
+                    <option *ngFor="let color of colors">{{ color }}</option>
+                </select>
+            </div>
+
+            <div class="flex items-center justify-center gap-4">
+                <button type="reset" class="bg-gray px-10 py-3 rounded-full" > Limpar </button>
+                <button type="submit" class="bg-purple text-white px-10 py-3 rounded-full ">Buscar</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
