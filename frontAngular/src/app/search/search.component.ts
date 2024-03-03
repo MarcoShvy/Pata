@@ -7,12 +7,18 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
-  species: string[] = [];
+  species: string[] = ['Cachorro', 'Gato'];
 
-  races: string[] = [];
+  racesDog: string[] = [];
+
+  racesCat: string[] = [];
 
   colors: string[] = ['white', 'flamingo', 'pínk'];
 
+  specie: string = ''
+
   
-  constructor() { }
+  constructor() {
+    console.log(this.specie)
+   }
 }

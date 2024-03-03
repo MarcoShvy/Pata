@@ -1,4 +1,4 @@
-package com.adoption.pata.model;
+package com.adoption.pata.model.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Entity
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private Long id;
