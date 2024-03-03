@@ -7,18 +7,24 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
-  species: string[] = ['Cachorro', 'Gato'];
+  specie!: string
+  species: string[] = ['cachorro', 'Gato'];
+  raceDog: string[] = ['Caramelo', 'Auau']
+  race: string = ''
 
-  racesDog: string[] = [];
+  test = ['teste', 'test']
 
-  racesCat: string[] = [];
+  raceSelect() {
+    if (this.specie === 'cachorro') {
+      return this.raceDog
+    } else {
+    return null
+  }
+  }
 
+testando() {
+  console.log('dsadsa' + this.specie)
+}
   colors: string[] = ['white', 'flamingo', 'pínk'];
 
-  specie: string = ''
-
-  
-  constructor() {
-    console.log(this.specie)
-   }
 }

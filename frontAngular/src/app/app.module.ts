@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -15,12 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     AboutComponent,
     SearchComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

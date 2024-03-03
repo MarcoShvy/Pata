@@ -4,20 +4,16 @@
 
             <div class="flex flex-col">
                 <label for="species">Especies</label>
-                <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="species">
-                    
-                    <option *ngFor="let specie of species" >{{ specie }}</option>
-                    
+                <select [(ngModel)]="specie" (change)="testando()" class="form-select" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="species">  
+                    <option  *ngFor="let specie of species" > {{ specie }} </option > 
                 </select>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col" >
 
                 <label for="race">Raça</label>
-                <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="race">
-                    <ng-template *ngIf=" specie == 'Cachorro'">
-                        <option *ngFor="let race of racesDog">{{ race }}</option>
-                    </ng-template>
+                <select [(ngModel)]="race" class="form-select" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="race">
+                        <option *ngFor="let race of raceSelect()">{{ race }}</option>
                 </select>
             </div>
 
@@ -25,7 +21,6 @@
 
                 <label for="color">Cor</label>
                 <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="color">
-                    
                     <option *ngFor="let color of colors">{{ color }}</option>
                 </select>
             </div>
