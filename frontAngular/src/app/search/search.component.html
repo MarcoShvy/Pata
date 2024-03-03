@@ -4,15 +4,17 @@
 
             <div class="flex flex-col">
                 <label for="species">Especies</label>
-                <select [(ngModel)]="specie" (change)="testando()" class=" form-select border border-red-500 bg-lilac rounded-full p-2 w-60 " id="species">  
-                    <option  *ngFor="let specie of species" > {{ specie }} </option > 
+                <select [(ngModel)]="specie" name="specie"  class=" form-select border border-red-500 bg-lilac rounded-full p-2 w-60 " id="species">
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option  *ngFor="let specie of species" > {{ specie }} </option >
                 </select>
             </div>
 
             <div class="flex flex-col" >
 
                 <label for="race">Raça</label>
-                <select [(ngModel)]="race" class="form-select" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="race">
+                <select  class="form-select border border-red-500 bg-lilac rounded-full p-2 w-60" id="race">
+                        <option value="" selected disabled>Selecione uma opção</option>
                         <option *ngFor="let race of raceSelect()">{{ race }}</option>
                 </select>
             </div>
@@ -21,6 +23,7 @@
 
                 <label for="color">Cor</label>
                 <select class="form-select" aria-label="Default select example" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="color">
+                    <option value="" selected disabled>Selecione uma opção</option>
                     <option *ngFor="let color of colors">{{ color }}</option>
                 </select>
             </div>
@@ -31,6 +34,4 @@
             </div>
         </form>
     </div>
-
-
 </div>

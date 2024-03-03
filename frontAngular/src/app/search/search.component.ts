@@ -9,22 +9,21 @@ export class SearchComponent {
 
   specie: string = '';
   species: string[] = ['cachorro', 'Gato'];
-  raceDog: string[] = ['Caramelo', 'Auau']
+  raceDog: string[] = ['Caramelo', 'Auau'];
+  raceCat: string[] = ['Siames', 'Persa']
   race: string = ''
 
-  test = ['teste', 'test']
+  
 
   raceSelect() {
-    if (this.specie === 'cachorro') {
+    if (this.specie == 'cachorro') {
       return this.raceDog
     } else {
-    return null
+    return this.raceCat
   }
   }
 
-testando() {
-  console.log('dsadsa' + this.specie)
-}
+
   colors: string[] = ['white', 'flamingo', 'pínk'];
 
 }
