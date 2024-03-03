@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
-  specie!: string
+  specie: string = '';
   species: string[] = ['cachorro', 'Gato'];
   raceDog: string[] = ['Caramelo', 'Auau']
   race: string = ''

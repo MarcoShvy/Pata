@@ -4,7 +4,7 @@
 
             <div class="flex flex-col">
                 <label for="species">Especies</label>
-                <select [(ngModel)]="specie" (change)="testando()" class="form-select" class="border border-red-500 bg-lilac rounded-full p-2 w-60" id="species">  
+                <select [(ngModel)]="specie" (change)="testando()" class=" form-select border border-red-500 bg-lilac rounded-full p-2 w-60 " id="species">  
                     <option  *ngFor="let specie of species" > {{ specie }} </option > 
                 </select>
             </div>
