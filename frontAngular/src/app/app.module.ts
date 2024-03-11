@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimalsHomeComponent } from './animals-home/animals-home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     SearchComponent,
     AdvancedSearchComponent,
+    AnimalsHomeComponent,
     
   ],
   imports: [
