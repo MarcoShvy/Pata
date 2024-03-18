@@ -1,6 +1,7 @@
 package com.adoption.pata.service;
 
 import com.adoption.pata.model.animal.Animal;
+import com.adoption.pata.model.animal.AnimalDTO;
 import com.adoption.pata.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,11 @@ public class AnimalService {
         return animalObj.get();
     }
 
-    public Animal insert(Animal animalObj) {
-        return animalRepository.save(animalObj);
+    public Animal create(AnimalDTO animalDTO) {
+
+        Animal animalObj = new Animal(animalDTO.name(), animalDTO.specie(), animalDTO.age(), animalDTO.color(), animalDTO.availableForAdoption());
+
+        this.animalRepository.save(animalObj);
+        return animalObj;
     }
 }

@@ -1,6 +1,7 @@
 package com.adoption.pata.controller;
 
 import com.adoption.pata.model.animal.Animal;
+import com.adoption.pata.model.animal.AnimalDTO;
 import com.adoption.pata.service.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +29,11 @@ public class AnimalController {
     }
 
     @PostMapping
-    public ResponseEntity<Animal> insertAnimal (@RequestBody Animal animalObj) {
-        animalObj = animalService.insert(animalObj);
+    public ResponseEntity<Animal> createAnimal (@RequestBody AnimalDTO animalDTO) {
+        Animal animalObj = animalService.create(animalDTO);
+
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(animalObj.getId()).toUri();
+
         return ResponseEntity.created(uri).body(animalObj);
     }
 }
